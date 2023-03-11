@@ -37,7 +37,7 @@ sizes_req_arr_ref.sort(reverse=True)
 j = 0
 flag = True
 for s in sizes_req_arr_ref:
-    if sizes_req_arr_ref[j] >= s:
+    if j < len(sizes_avail_arr_ref) and sizes_avail_arr_ref[j] >= s:
         j+=1
     else:
         print("No")
